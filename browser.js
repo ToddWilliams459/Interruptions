@@ -73,6 +73,8 @@ function reload(config) {
                 localStorage.setItem("user_name", name);
                 localStorage.setItem("user_color", color);
                 getInput();
+				opts.startArea = nameToInput(name);
+				console.log(opts);
                 var renderer = createRenderer(opts);
                 if (opts.debugLuma) {
                     renderer.debugLuma();
@@ -117,6 +119,11 @@ function getInput() {
     document.getElementById("color-text").innerHTML = localStorage.getItem("user_color");
 }
 
+function nameToInput(name){
+	var nti;
+	nti = (1/name.length)+5;
+	return nti;
+}
 function resize() {
     letterbox(canvas, [window.innerWidth, window.innerHeight]);
 }
