@@ -119,6 +119,7 @@ function getInput() {
     document.getElementById("color-text").innerHTML = localStorage.getItem("user_color");
 }
 
+
 function nameToInput(name){
 	var nti;
 	nti = (1/name.length)+5;
